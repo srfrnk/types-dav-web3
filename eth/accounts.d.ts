@@ -4,6 +4,9 @@ export interface Account {
 	address: string;
 	privateKey: string;
 	publicKey: string;
+	sign(
+		data: string,
+	): Signature;
 }
 
 export interface Signature {
@@ -12,6 +15,7 @@ export interface Signature {
 	r: string;
 	s: string;
 	v: string;
+	rawTransaction: string;
 }
 
 export interface PrivateKey {
@@ -45,7 +49,7 @@ export default interface Accounts {
 		privateKey: string,
 		returnSignature?: boolean,
 		cb?: (err: Error, result: string | Signature) => void
-	): Promise<string> | Signature;
+	): Promise<Signature>;
 	recoverTransaction(signature: string | Signature): string;
 	sign(
 		data: string,
