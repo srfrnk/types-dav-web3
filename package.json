@@ -94,7 +94,7 @@
   "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped#readme",
   "license": "MIT",
   "main": "",
-  "name": "dav-web3",
+  "name": "@types/web3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git"
